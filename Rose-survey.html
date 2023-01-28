@@ -4,10 +4,177 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Rose-survey.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Thougths on Rose</title>
   </head>
   <body>
     <h1 id="title">What do you think about Rose?</h1>
-    <p></p>
+    <p class="description">
+      Help me improve my fictional character named Rose by answering this survey
+    </p>
+    <form action="post" id="survey-form">
+      <fieldset>
+        <label for="name"
+          >Name
+          <input
+            type="text"
+            id="name"
+            required
+            placeholder="How should I address you?"
+        /></label>
+        <label for="email"
+          >Email
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email so I can get back to you"
+        /></label>
+        <label for="age"
+          >Age <span style="font-size: 11px">(optional)</span>
+          <input
+            type="number"
+            min="14"
+            max="110"
+            placeholder="How old are you?"
+        /></label>
+        <div class="character-wrapper">
+          <div class="fc-wrapper">
+            <label for="fictional-character" class="fictional-character"
+              >Do you have one or more fictional characters?</label
+            >
+            <div class="yn-wrapper">
+              <label for="yes" class="yn">
+                <input
+                  type="radio"
+                  id="yes"
+                  class="inline"
+                  name="fictional-character"
+                  checked
+                />Yes</label
+              >
+              <label for="no" class="yn">
+                <input
+                  type="radio"
+                  id="no"
+                  class="inline"
+                  name="fictional-character"
+                />
+                No</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fcn-wrapper">
+          <label for="fictional-character-name"
+            >What is their name(s)?
+            <textarea
+              class="fictional-character-name"
+              name="fictional-character-name"
+              id="fictional-character-name"
+              cols="30"
+              rows="2"
+            ></textarea>
+          </label>
+        </div>
+        <label for="fictional-character-image"
+          >You can upload images of your characters<input
+            type="file"
+            name="fictional-character-image"
+            id="fictional-character-image"
+        /></label>
+
+        <label for="traits" class="flaws"
+          >What flaws should I consider giving her?
+          <label for="trait" class="trait">
+            <input
+              class="inline"
+              type="checkbox"
+              name="trait"
+              id="trait"
+            />Arrogant
+          </label>
+          <label for="trait" class="trait">
+            <input
+              class="inline"
+              type="checkbox"
+              name="trait"
+              id="trait"
+            />Cruel</label
+          >
+          <label for="trait" class="trait">
+            <input
+              class="inline"
+              type="checkbox"
+              name="trait"
+              id="trait"
+            />Distrubed</label
+          >
+          <label for="trait" class="trait">
+            <input
+              class="inline"
+              type="checkbox"
+              name="trait"
+              id="trait"
+            />Selfish</label
+          >
+          <div class="other-trait">
+            <label class="trait" for="other-trait"
+              ><input
+                class="inline"
+                type="checkbox"
+                name="trait"
+                id="trait"
+              />Other</label
+            >
+          </div>
+          <textarea
+            name="other-trait"
+            id="other-trait"
+            cols="10"
+            rows="2"
+          ></textarea>
+        </label>
+        <label for="referrer">How do you know about Rose?</label>
+        <select name="referrer" id="referrer">
+          <option value="">Select one</option>
+          <option value="1">Twitter</option>
+          <option value="2">Instagram</option>
+          <option value="3">Other</option>
+        </select>
+        <label for="thoughts"
+          >What do you think about Rose's overall design?
+          <textarea
+            name="thoughts"
+            id="thoughts"
+            cols="65"
+            rows="5"
+            placeholder="Rose is Karakura's Angel so she is obviously perfect..."
+          ></textarea>
+        </label>
+        <label for="message-for-Rose"
+          >What would you, or your character, say to Rose?
+          <textarea
+            name="message-for-Rose"
+            id="message-for-Rose"
+            cols="65"
+            rows="5"
+            placeholder="I hate you, you ruined my life."
+          ></textarea>
+        </label>
+        <input
+          type="submit"
+          name="submit"
+          id="submit"
+          value="Send your thougths"
+        />
+      </fieldset>
+    </form>
   </body>
 </html>
