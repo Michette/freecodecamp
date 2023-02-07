@@ -4,6 +4,7 @@ body {
   height: 100vh;
   font-size: 17px;
   font-family: "roboto";
+  /* color: white; */
 }
 
 h1,
@@ -17,13 +18,14 @@ form {
   border: 1px solid black;
   width: 60vw;
   max-width: 600px;
-  min-width: 500px;
+  min-width: 600px;
   margin: 0 auto;
-  padding-bottom: 2em;
+  padding: 1em;
 }
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 label {
@@ -36,7 +38,18 @@ input {
   width: 100%;
   margin: 10px 0 0 0;
   width: 100%;
-  min-height: 2em;
+  min-height: 25px;
+  max-width: 550px;
+  border-radius: 3px;
+  border: none;
+  padding: 7px;
+}
+
+textarea,
+input {
+  outline: none;
+  border-radius: 2px;
+  border: none;
 }
 
 .character-wrapper {
@@ -81,22 +94,87 @@ input {
 
 label input[type="file"] {
   margin: 0;
-}
-
-.traits {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
 }
 
 .trait {
   display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
 .fictional-character-name {
   width: 100%;
-  max-width: 400px;
+  max-height: 150px;
+  max-width: 540px;
+  min-width: 540px;
+  min-height: 30px;
+  display: block;
 }
 
-textarea {
-  /* max-width: 300px; */
+.message-for-Rose,
+.thoughts {
+  max-width: 540px;
+  min-width: 540px;
+  min-height: 50px;
+  max-height: 800px;
+  display: block;
+}
+
+.other-text-area-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.other-text-area {
+  max-width: 440px;
+  min-width: 440px;
+  min-height: 50px;
+  max-height: 800px;
+}
+
+.traits-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit {
+  width: auto;
+  margin: 1em auto;
+  padding: 0.7rem;
+  background-color: rgb(255, 245, 247);
+  font-size: 15px;
+  font-family: "roboto", Arial, sans-serif;
+  border-radius: 3px;
+}
+
+.referrer {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.referrer-select {
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  padding: 3px 7px;
+}
+
+.image-file-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.message-for-Rose,
+.thoughts,
+.fictional-character-name,
+.image-file {
+  margin-top: 10px;
+  padding: 10px;
+}
+.input-image-file {
+  width: 200px;
 }

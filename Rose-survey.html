@@ -15,12 +15,12 @@
   </head>
   <body>
     <h1 id="title">What do you think about Rose?</h1>
-    <p class="description">
+    <p class="description" id="description">
       Help me improve my fictional character named Rose by answering this survey
     </p>
     <form action="post" id="survey-form">
       <fieldset>
-        <label for="name"
+        <label for="name" id="name-label"
           >Name
           <input
             type="text"
@@ -28,21 +28,23 @@
             required
             placeholder="How should I address you?"
         /></label>
-        <label for="email"
+        <label for="email" id="email-label"
           >Email
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Enter your email so I can get back to you"
+            required
         /></label>
-        <label for="age"
+        <label for="age" id="number-label"
           >Age <span style="font-size: 11px">(optional)</span>
           <input
             type="number"
             min="14"
             max="110"
             placeholder="How old are you?"
+            id="number"
         /></label>
         <div class="character-wrapper">
           <div class="fc-wrapper">
@@ -56,6 +58,7 @@
                   id="yes"
                   class="inline"
                   name="fictional-character"
+                  value="yes"
                   checked
                 />Yes</label
               >
@@ -65,6 +68,7 @@
                   id="no"
                   class="inline"
                   name="fictional-character"
+                    value="no"
                 />
                 No</label
               >
@@ -83,74 +87,180 @@
             ></textarea>
           </label>
         </div>
-        <label for="fictional-character-image"
-          >You can upload images of your characters<input
-            type="file"
-            name="fictional-character-image"
-            id="fictional-character-image"
-        /></label>
-
-        <label for="traits" class="flaws"
-          >What flaws should I consider giving her?
-          <label for="trait" class="trait">
-            <input
-              class="inline"
-              type="checkbox"
-              name="trait"
-              id="trait"
-            />Arrogant
-          </label>
-          <label for="trait" class="trait">
-            <input
-              class="inline"
-              type="checkbox"
-              name="trait"
-              id="trait"
-            />Cruel</label
-          >
-          <label for="trait" class="trait">
-            <input
-              class="inline"
-              type="checkbox"
-              name="trait"
-              id="trait"
-            />Distrubed</label
-          >
-          <label for="trait" class="trait">
-            <input
-              class="inline"
-              type="checkbox"
-              name="trait"
-              id="trait"
-            />Selfish</label
-          >
-          <div class="other-trait">
-            <label class="trait" for="other-trait"
-              ><input
-                class="inline"
-                type="checkbox"
-                name="trait"
-                id="trait"
-              />Other</label
-            >
+        <div class="image-file-wrapper">
+          <div>
+            <p class="image-file">You can upload images of your characters</p> 
           </div>
-          <textarea
-            name="other-trait"
-            id="other-trait"
-            cols="10"
-            rows="2"
-          ></textarea>
-        </label>
-        <label for="referrer">How do you know about Rose?</label>
-        <select name="referrer" id="referrer">
-          <option value="">Select one</option>
-          <option value="1">Twitter</option>
-          <option value="2">Instagram</option>
-          <option value="3">Other</option>
-        </select>
+          <div class="input-image-file">
+            <input
+              class="image-file"
+              type="file"
+              name="fictional-character-image"
+              id="fictional-character-image"
+              style="margin:0"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="traits" class="flaws"
+            >What traits should I consider giving her?
+            <div class="traits-wrapper">
+              <div class="traits-one">
+                <label for="trait1" class="trait">
+                  <input
+                    class="inline"
+                    type="checkbox"
+                    name="trait"
+                    id="trait1"
+                    value="1"
+                  />Arrogant
+                </label>
+
+                <label for="trait2" class="trait">
+                  <input
+                    class="inline"
+                    type="checkbox"
+                    name="trait"
+                    id="trait2"
+                    value="2"
+                   
+                  />Bossy</label
+                >
+                <label for="trait3" class="trait">
+                  <input
+                    class="inline"
+                    type="checkbox"
+                    name="trait"
+                    id="trait3"
+                    value="3"
+                  />Cruel</label
+                >
+                <label for="trait4" class="trait">
+                  <input
+                    class="inline"
+                    type="checkbox"
+                    name="trait"
+                    id="trait4"
+                    value="4"
+                  />Dishonest</label
+                >
+              </div>
+                <div class="traits-two">
+                  <label for="trait5" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait5"
+                    value="5"
+                    />Energetic
+                  </label>
+                  <label for="trait6" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait6"
+                    value="6"
+                    />Friendly</label
+                  >
+                  <label for="trait7" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait7"
+                    value="7"
+                    />Greedy</label
+                  >
+                  <label for="trait8" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait8"
+                    value="8"
+                    />Intelligent</label
+                  >
+                </div>
+                <div class="traits-three">
+                  <label for="trait9" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait9"
+                    value="9"
+                    />Rude
+                  </label>
+                  <label for="trait10" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait10"
+                    value="10"
+                    />Spoiled</label
+                  >
+                  <label for="trait11" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait11"
+                    value="11"
+                    />Timid</label
+                  >
+                  <label for="trait12" class="trait">
+                    <input
+                      class="inline"
+                      type="checkbox"
+                      name="trait"
+                      id="trait12"
+                    value="12"
+                    />Wise</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="other-text-area-wrapper">
+              <div class="other-trait">
+                <label class="trait13" for="other-trait"
+                  ><input
+                    class="inline"
+                    type="checkbox"
+                    name="trait"
+                    id="trait13"
+                    value="13"
+                  />Other</label
+                >
+              </div>
+              <div>
+                <textarea
+                  class="other-text-area"
+                  name="other-trait"
+                  id="other-trait"
+                  cols="10"
+                  rows="2"
+                ></textarea>
+              </div>
+          </label>
+        </div>
+
+        <div class="referrer">
+          <label for="referrer">How did you know about Rose?</label>
+          <select name="referrer" id="dropdown" class="referrer-select">
+            <option value="">Select one</option>
+            <option value="1">Twitter</option>
+            <option value="2">Instagram</option>
+            <option value="3">Other</option>
+          </select>
+        </div>
+
         <label for="thoughts"
           >What do you think about Rose's overall design?
           <textarea
+            class="thoughts"
             name="thoughts"
             id="thoughts"
             cols="65"
@@ -161,6 +271,7 @@
         <label for="message-for-Rose"
           >What would you, or your character, say to Rose?
           <textarea
+            class="message-for-Rose"
             name="message-for-Rose"
             id="message-for-Rose"
             cols="65"
@@ -169,6 +280,7 @@
           ></textarea>
         </label>
         <input
+          class="submit"
           type="submit"
           name="submit"
           id="submit"
