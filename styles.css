@@ -1,0 +1,87 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  height: 2000px;
+}
+
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: 0;
+  background-color: pink;
+}
+
+nav ul li,
+nav header {
+  padding: 17px;
+  width: 300px;
+  list-style-type: none;
+  margin: 0;
+  border: 1px solid rgb(255, 228, 228);
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 360px;
+  padding: 15px;
+  padding-top: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 253, 253);
+}
+
+ul {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+code {
+  background-color: rgb(255, 232, 232);
+  padding: 20px;
+  border-radius: 5px;
+  display: block;
+  margin: 1rem;
+  word-wrap: normal;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+section {
+  margin-bottom: 35px;
+}
+
+section header {
+  font-weight: 600;
+  font-size: larger;
+  margin-left: -15px;
+  padding-bottom: 5px;
+}
+
+section ul {
+  padding: 5px;
+  padding-left: 30px;
+}
+
+nav header {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(255, 253, 253);
+}
+
+p.text {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  #navbar {
+    background-color: rgb(149, 109, 212);
+  }
+}

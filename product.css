@@ -1,0 +1,290 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: rgb(37, 37, 37);
+  color: rgb(160, 160, 160);
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(216, 168, 175);
+}
+
+.logo {
+  color: rgb(37, 37, 37);
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.logo img {
+  width: 21px;
+}
+
+#The_Art img {
+  height: 300px;
+  width: auto;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(216, 168, 175);
+  padding: 0 70px;
+  color: rgb(37, 37, 37);
+}
+
+.wrapper {
+  margin-top: 100px;
+}
+.commission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0px;
+  padding-top: 35px;
+}
+
+.commission h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.form-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 500px;
+}
+
+#email {
+  padding: 8px;
+  border-radius: 5px;
+  width: 400px;
+  border: none;
+}
+
+#submit,
+button {
+  background-color: rgb(216, 168, 175);
+  color: rgb(37, 37, 37);
+  border-radius: 5px;
+  border: none;
+}
+
+#submit {
+  padding: 5px 15px;
+}
+
+button:hover,
+#submit:hover {
+  cursor: pointer;
+  background-color: rgb(255, 226, 231);
+}
+
+a:hover {
+  color: rgb(255, 226, 231) !important;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+section img {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(87, 87, 87);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(216, 168, 175);
+}
+
+.price p {
+  color: rgb(216, 168, 175);
+  font-weight: bold;
+}
+
+.product h2 {
+  color: rgb(216, 168, 175);
+  margin: 0;
+  margin-bottom: 5px;
+}
+img {
+  border: 1px solid rgb(216, 168, 175, 0.4);
+}
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+button {
+  margin-top: 25px;
+  padding: 7px 15px;
+}
+
+.level {
+  font-weight: bold;
+  color: rgb(216, 168, 175);
+}
+
+.pricing {
+  display: flex;
+  gap: 15px;
+  justify-content: space-evenly;
+  width: 1200px;
+  margin: auto;
+}
+
+#The_Pricing h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.type p,
+.price p {
+  font-size: 0.8rem;
+  display: flex;
+}
+
+.price p {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.product img {
+  margin: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.do-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+.do {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.do p {
+  color: rgb(216, 168, 175);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#The_World,
+#The_World p {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#The_World,
+#The_Art,
+#How_It_Works,
+#The_Pricing {
+  padding-top: 70px;
+  padding-left: 50px;
+}
+
+#How_It_Works p,
+#How_It_Works span {
+  line-height: 20px;
+  font-size: 0.8rem;
+}
+
+.do li {
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+
+.do ul,
+.do p {
+  margin-top: 0;
+}
+
+.commission-trailer {
+  display: flex;
+  align-items: center;
+  padding-left: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+.footer {
+  justify-content: space-between;
+  display: flex;
+  background-color: rgb(216, 168, 175);
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: -20px;
+  margin-top: 200px;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+footer span {
+  position: absolute;
+  right: 50px;
+  bottom: 5px;
+  font-size: 0.8rem;
+  color: rgb(37, 37, 37);
+}
+
+@media screen and (max-width: 1199px) {
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+}
